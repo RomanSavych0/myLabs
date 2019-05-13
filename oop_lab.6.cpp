@@ -68,7 +68,7 @@ public:
 	
 	void printList();
 
-	void deleteElement(T data);
+	void deleteElements(T data);
 
 	void printWantedAmountFromWantedElement(T data, int amount);
 	
@@ -85,8 +85,8 @@ int main(){
 	list1->printList();
 	char toDel1 = 'a', toDel2 = 'b';
 	cout << "\nList of elements after deleting " << toDel1 << " and " << toDel2 << " : ";
-	list1->deleteElement(toDel1);
-	list1->deleteElement(toDel2);
+	list1->deleteElements(toDel1);
+	list1->deleteElements(toDel2);
 	list1->printList();
 	delete list1;
 	cout << endl;
@@ -102,10 +102,10 @@ int main(){
 	lister->addToList(v);
 	lister->printList();
 	cout << endl;
-	lister->deleteElement(wtf);
-	lister->deleteElement("bollo salem here there");
+	lister->deleteElements(wtf);
+	lister->deleteElements("bollo salem here there");
 	lister->printList();
-	lister->deleteElement("gollo what the hell, ya?");
+	lister->deleteElements("gollo what the hell, ya?");
 	lister->printList();
 	delete lister;
 
@@ -119,7 +119,7 @@ int main(){
 	list3->printList();
 	double toDel4 = 188.932;
 	cout << "\nList of elements(wanted number[10]) after deleting " << toDel4 << " : \n";
-	list3->deleteElement(toDel4);
+	list3->deleteElements(toDel4);
 	list3->printWantedAmountFromWantedElement(5.4, 10);
 	delete list3;
 
@@ -162,7 +162,7 @@ void CircularLinkedList<T>::printList() {
 }
 
 template<>
-void CircularLinkedList<const char*>::deleteElement(const char* data) {
+void CircularLinkedList<const char*>::deleteElements(const char* data) {
 	Node *tempHead = head;
 	Node* tempHeadNext = head->getNext();
 	
@@ -214,7 +214,7 @@ void CircularLinkedList<const char*>::printWantedAmountFromWantedElement(const c
 }
 
 template<class T>
-void CircularLinkedList<T>::deleteElement(T data) {
+void CircularLinkedList<T>::deleteElements(T data) {
 	Node *tempHead = head;
 	Node* tempHeadNext = head->getNext();
 	
