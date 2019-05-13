@@ -13,7 +13,7 @@ private:
 		T data;
 		Node* next;
 	public:
-		Node(): next(nullptr){}
+		Node(){}
 		~Node() {}
 
 		Node(T data) {
