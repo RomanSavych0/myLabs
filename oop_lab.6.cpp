@@ -63,10 +63,6 @@ public:
 			delete head;
 		}
 	}
-
-	Node* getNodeHead() {
-		return head;
-	}
 	
 	void addToList(T data);
 	
@@ -124,7 +120,7 @@ int main(){
 	double toDel4 = 188.932;
 	cout << "\nList of elements(wanted number[10]) after deleting " << toDel4 << " : \n";
 	list3->deleteElement(toDel4);
-	list3->printWantedAmountFromWantedElement(list3->getNodeHead()->getData(), 10);
+	list3->printWantedAmountFromWantedElement(5.4, 10);
 	delete list3;
 
 	return 0;
