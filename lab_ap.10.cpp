@@ -1,4 +1,4 @@
-#include "pch.h"
+//Binary Tree with points coordinates(x, y, z); Deleting nodes with one children element, finding element the closest to (0 , 0 , 0;
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -205,8 +205,7 @@ int main(void) {
 	showTree(root, 1);
 	printf("\n\n");
 	Node* closest = findTheClosestPointToStart(root);
-	printf("The closes point to start: %d - %d -%d\n", closest->data.x, closest->data.y, closest->data.z);
-
+	printf("The closest point to start: %d - %d -%d\n", closest->data.x, closest->data.y, closest->data.z);
 	puts("\n\tDeleting all nodes with one children element");
 	freeOneChildrenElements(root);
 	showTree(root, 1);
